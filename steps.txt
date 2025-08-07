@@ -1,0 +1,43 @@
+# Folder ----> 
+# Requirements.txt ---> all packages 
+# src ---> cnnClassifier  ----> 
+# __init__.py 
+# constants ----> __init__.py 
+# config ----> config.yaml 
+
+# Research --> data_ingestion.ipynb ---> data create ---> artifacts folder . 
+
+# python main.py ----> we will see our logs will store in runnig_logs.log file . 
+
+
+# step-1  constants ----> __init__.py (config_file_path , params_file_path) 
+
+# step-2 entity ---> config_entity.py ---> class DataIngestionConfig(
+  #  root_dir
+  # source_url 
+  # local_data_file 
+  # unzip_dir  
+# )
+
+# step-3 config ---> configuration.py ---> class ConfigurationManager(config , params filepath,
+# function(get_data_ingestion_config)---> will add root_dir , source_url , local_data_file , 
+# unzip_dir 
+# )
+
+# step-5 components ---> data_ingestion.py ---> will add ---> 
+# class DataIngestionConfig(
+  #  1_st function (download_file) --> url . filename all the things will store in logs. 
+# 2_nd function(extract_file_zip) ----> we will lextract all the data and this information wil
+# also store in runnig_logs file 
+# )
+
+# step-6 Pipeline ---> stage_01_data_ingestion.py ---> Class DataIngestionTrainigPipeline(
+    # Import Configuration Manager  , config , download)file  , extract_file  --->
+  
+# )
+
+step-7 add  pipeline to main.py 
+
+Now run python main.py 
+
+# Now we will run our application . 

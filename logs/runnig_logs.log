@@ -1,0 +1,117 @@
+[2025-08-07 14:32:22,060: INFO: common: YAML file config\config.yaml loaded successfully]
+[2025-08-07 14:32:22,065: INFO: common: YAML file params.yaml loaded successfully]
+[2025-08-07 14:32:22,067: INFO: common: created directory at: artifacts]
+[2025-08-07 14:32:22,070: INFO: common: created directory at: artifiacts/data_ingestion]
+[2025-08-07 14:34:17,821: INFO: common: YAML file config\config.yaml loaded successfully]
+[2025-08-07 14:34:17,828: INFO: common: YAML file params.yaml loaded successfully]
+[2025-08-07 14:34:17,830: INFO: common: created directory at: artifacts]
+[2025-08-07 14:34:17,833: INFO: common: created directory at: artifiacts/data_ingestion]
+[2025-08-07 14:38:48,811: INFO: main: >>>>>> Data Ingestion Stage started <<<<<<]
+[2025-08-07 14:38:48,811: ERROR: main: name 'ConfigurationManager' is not defined]
+Traceback (most recent call last):
+  File "C:\Users\sunil kumar\OneDrive - AlgoDox Technology PVT LTD\Desktop\dl_ops_champios\vinipro\main.py", line 13, in <module>
+    data_ingestion.main()
+  File "C:\Users\sunil kumar\OneDrive - AlgoDox Technology PVT LTD\Desktop\dl_ops_champios\vinipro\src\cnnClassifier\pipeline\stage_01_data_ingestion.py", line 14, in main
+    config = ConfigurationManager()
+            ^^^^^^^^^^^^^^^^^^^^
+NameError: name 'ConfigurationManager' is not defined
+[2025-08-07 14:40:46,960: INFO: main: >>>>>> Data Ingestion Stage started <<<<<<]
+[2025-08-07 14:40:46,961: ERROR: main: name 'ConfigurationManager' is not defined]
+Traceback (most recent call last):
+  File "C:\Users\sunil kumar\OneDrive - AlgoDox Technology PVT LTD\Desktop\dl_ops_champios\vinipro\main.py", line 13, in <module>
+    data_ingestion.main()
+  File "C:\Users\sunil kumar\OneDrive - AlgoDox Technology PVT LTD\Desktop\dl_ops_champios\vinipro\src\cnnClassifier\pipeline\stage_01_data_ingestion.py", line 14, in main
+    config = ConfigurationManager()
+            ^^^^^^^^^^^^^^^^^^^^
+NameError: name 'ConfigurationManager' is not defined
+[2025-08-07 14:43:19,653: INFO: main: >>>>>> Data Ingestion Stage started <<<<<<]
+[2025-08-07 14:43:19,654: ERROR: main: name 'ConfigurationManager' is not defined]
+Traceback (most recent call last):
+  File "C:\Users\sunil kumar\OneDrive - AlgoDox Technology PVT LTD\Desktop\dl_ops_champios\vinipro\main.py", line 13, in <module>
+    data_ingestion.main()
+  File "C:\Users\sunil kumar\OneDrive - AlgoDox Technology PVT LTD\Desktop\dl_ops_champios\vinipro\src\cnnClassifier\pipeline\stage_01_data_ingestion.py", line 15, in main
+    config = ConfigurationManager()
+            ^^^^^^^^^^^^^^^^^^^^
+NameError: name 'ConfigurationManager' is not defined
+[2025-08-07 14:44:22,410: INFO: main: >>>>>> Data Ingestion Stage started <<<<<<]
+[2025-08-07 14:44:22,413: INFO: common: YAML file config\config.yaml loaded successfully]
+[2025-08-07 14:44:22,420: INFO: common: YAML file params.yaml loaded successfully]
+[2025-08-07 14:44:22,423: INFO: common: created directory at: artifacts]
+[2025-08-07 14:44:22,424: INFO: common: created directory at: artifiacts/data_ingestion]
+[2025-08-07 14:44:23,226: ERROR: main: [Errno 2] No such file or directory: 'artifacts\\data_ingestion\\data.zip']
+Traceback (most recent call last):
+  File "C:\Users\sunil kumar\OneDrive - AlgoDox Technology PVT LTD\Desktop\dl_ops_champios\vinipro\main.py", line 13, in <module>
+    data_ingestion.main()
+  File "C:\Users\sunil kumar\OneDrive - AlgoDox Technology PVT LTD\Desktop\dl_ops_champios\vinipro\src\cnnClassifier\pipeline\stage_01_data_ingestion.py", line 18, in main
+    data_ingestion.download_file()
+  File "C:\Users\sunil kumar\OneDrive - AlgoDox Technology PVT LTD\Desktop\dl_ops_champios\vinipro\src\cnnClassifier\components\data_ingestion.py", line 18, in download_file
+    filename, headers = request.urlretrieve(
+                        ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sunil kumar\AppData\Local\Programs\Python\Python312\Lib\urllib\request.py", line 250, in urlretrieve
+    tfp = open(filename, 'wb')
+          ^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts\\data_ingestion\\data.zip'
+[2025-08-07 14:45:28,280: INFO: main: >>>>>> Data Ingestion Stage started <<<<<<]
+[2025-08-07 14:45:28,286: INFO: common: YAML file config\config.yaml loaded successfully]
+[2025-08-07 14:45:28,290: INFO: common: YAML file params.yaml loaded successfully]
+[2025-08-07 14:45:28,293: INFO: common: created directory at: artifacts]
+[2025-08-07 14:45:28,296: INFO: common: created directory at: artifiacts/data_ingestion]
+[2025-08-07 14:45:28,606: ERROR: main: [Errno 2] No such file or directory: 'artifacts\\data_ingestion\\data.zip']
+Traceback (most recent call last):
+  File "C:\Users\sunil kumar\OneDrive - AlgoDox Technology PVT LTD\Desktop\dl_ops_champios\vinipro\main.py", line 13, in <module>
+    data_ingestion.main()
+  File "C:\Users\sunil kumar\OneDrive - AlgoDox Technology PVT LTD\Desktop\dl_ops_champios\vinipro\src\cnnClassifier\pipeline\stage_01_data_ingestion.py", line 18, in main
+    data_ingestion.download_file()
+  File "C:\Users\sunil kumar\OneDrive - AlgoDox Technology PVT LTD\Desktop\dl_ops_champios\vinipro\src\cnnClassifier\components\data_ingestion.py", line 18, in download_file
+    filename, headers = request.urlretrieve(
+                        ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sunil kumar\AppData\Local\Programs\Python\Python312\Lib\urllib\request.py", line 250, in urlretrieve
+    tfp = open(filename, 'wb')
+          ^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts\\data_ingestion\\data.zip'
+[2025-08-07 14:47:38,672: INFO: common: YAML file config\config.yaml loaded successfully]
+[2025-08-07 14:47:38,680: INFO: common: YAML file params.yaml loaded successfully]
+[2025-08-07 14:47:38,685: INFO: common: created directory at: artifacts]
+[2025-08-07 14:47:38,688: INFO: common: created directory at: artifiacts/data_ingestion]
+[2025-08-07 14:56:43,731: INFO: 3399376260: artifacts/data_ingestion/data.zip download! with following info: 
+ Connection: close
+Content-Length: 11616915
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "adf745abc03891fe493c3be264ec012691fe3fa21d861f35a27edbe6d86a76b1"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: CF7B:51A30:23A34B:574EE6:68946BD3
+Accept-Ranges: bytes
+Date: Thu, 07 Aug 2025 09:26:41 GMT
+Via: 1.1 varnish
+X-Served-By: cache-bom-vanm7210054-BOM
+X-Cache: HIT
+X-Cache-Hits: 0
+X-Timer: S1754558801.192582,VS0,VE219
+Vary: Authorization,Accept-Encoding
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: a1343ecb0050028665f7fb4da8294943d7aad4f4
+Expires: Thu, 07 Aug 2025 09:31:41 GMT
+Source-Age: 0
+
+]
+[2025-08-07 14:57:24,501: INFO: 3399376260: File already exists of size: ~ 11345 KB]
+[2025-08-07 14:57:40,550: INFO: common: YAML file config\config.yaml loaded successfully]
+[2025-08-07 14:57:40,556: INFO: common: YAML file params.yaml loaded successfully]
+[2025-08-07 14:57:40,559: INFO: common: created directory at: artifacts]
+[2025-08-07 14:57:40,561: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-08-07 14:57:40,563: INFO: 3399376260: File already exists of size: ~ 11345 KB]
+[2025-08-07 14:58:12,041: INFO: main: >>>>>> Data Ingestion Stage started <<<<<<]
+[2025-08-07 14:58:12,044: INFO: common: YAML file config\config.yaml loaded successfully]
+[2025-08-07 14:58:12,046: INFO: common: YAML file params.yaml loaded successfully]
+[2025-08-07 14:58:12,048: INFO: common: created directory at: artifacts]
+[2025-08-07 14:58:12,049: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-08-07 14:58:12,050: INFO: data_ingestion: File already exists of size: ~ 11345 KB]
+[2025-08-07 14:58:12,648: INFO: main: >>>>>> Data Ingestion Stage completed <<<<<<
+
+x==========x]
