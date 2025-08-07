@@ -3,7 +3,7 @@ artifacts_root: artifacts
 # different pipline
 data_ingestion:
   root_dir: artifiacts/data_ingestion
-  source_url: ghttps://github.com/SunilBajiya/ml_ops_champion/blob/main/Chicken-fecal-images.zip
+  source_url: https://github.com/SunilBajiya/ml_ops_champion/row/main/Chicken-fecal-images.zip
   local_data_file: "artifacts/data_ingestion/data.zip"
   unzip_dir: "artifacts/data_ingestion"
   
