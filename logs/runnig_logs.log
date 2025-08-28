@@ -282,3 +282,11 @@ x==========x]
 [2025-08-28 17:29:45,265: INFO: main: >>>>>> Evaluation completed <<<<<<
 
 x==========x]
+[2025-08-28 17:33:36,762: INFO: common: YAML file config\config.yaml loaded successfully]
+[2025-08-28 17:33:36,768: INFO: common: YAML file params.yaml loaded successfully]
+[2025-08-28 17:33:36,770: INFO: common: created directory at: artifacts]
+[2025-08-28 17:33:36,773: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir]
+[2025-08-28 17:33:36,775: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir]
+[2025-08-28 17:33:36,781: INFO: common: created directory at: artifacts\training]
+[2025-08-28 17:42:33,935: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2025-08-28 17:42:34,226: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
