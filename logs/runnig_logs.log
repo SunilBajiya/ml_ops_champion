@@ -175,3 +175,61 @@ x=======x]
 [2025-08-22 15:33:37,330: INFO: common: created directory at: artifacts]
 [2025-08-22 15:33:37,333: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir]
 [2025-08-22 15:33:37,335: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir]
+[2025-08-22 16:10:12,249: INFO: main: >>>>>> Data Ingestion Stage started <<<<<<]
+[2025-08-22 16:10:12,253: INFO: common: YAML file config\config.yaml loaded successfully]
+[2025-08-22 16:10:12,259: INFO: common: YAML file params.yaml loaded successfully]
+[2025-08-22 16:10:12,261: INFO: common: created directory at: artifacts]
+[2025-08-22 16:10:12,261: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-08-22 16:10:12,262: INFO: data_ingestion: File already exists of size: ~ 11345 KB]
+[2025-08-22 16:10:13,013: INFO: main: >>>>>> Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2025-08-22 16:10:13,014: INFO: main: >>>>>> Prepare Base Model started <<<<]
+[2025-08-22 16:10:13,020: INFO: common: YAML file config\config.yaml loaded successfully]
+[2025-08-22 16:10:13,024: INFO: common: YAML file params.yaml loaded successfully]
+[2025-08-22 16:10:13,028: INFO: common: created directory at: artifacts]
+[2025-08-22 16:10:13,030: INFO: common: created directory at: artifacts/prepare_base_model]
+[2025-08-22 16:10:14,016: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2025-08-22 16:10:14,262: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2025-08-22 16:10:18,967: INFO: main: >>>>>>> Prepare Base Model completed <<<<<
+
+x=======x]
+[2025-08-22 16:10:18,969: INFO: main: >>>>>> Training started <<<<<<]
+[2025-08-22 16:10:18,979: INFO: common: YAML file config\config.yaml loaded successfully]
+[2025-08-22 16:10:18,989: INFO: common: YAML file params.yaml loaded successfully]
+[2025-08-22 16:10:18,991: INFO: common: created directory at: artifacts]
+[2025-08-22 16:10:18,993: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir]
+[2025-08-22 16:10:18,994: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir]
+[2025-08-22 16:10:19,128: ERROR: main: "'training'"]
+Traceback (most recent call last):
+  File "box\\box.py", line 594, in box.box.Box.__getitem__
+KeyError: 'training'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\sunil kumar\OneDrive - AlgoDox Technology PVT LTD\Desktop\dl_ops_champios\vinipro\main.py", line 37, in <module>
+    model_trainer.main()
+  File "C:\Users\sunil kumar\OneDrive - AlgoDox Technology PVT LTD\Desktop\dl_ops_champios\vinipro\src\cnnClassifier\pipeline\stage_03_training.py", line 21, in main
+    training_config = config.get_training_config()
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sunil kumar\OneDrive - AlgoDox Technology PVT LTD\Desktop\dl_ops_champios\vinipro\src\cnnClassifier\config\configuration.py", line 68, in get_training_config
+    training = self.config['training']
+               ~~~~~~~~~~~^^^^^^^^^^^^
+  File "box\\box.py", line 621, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'training'"
+[2025-08-23 09:13:57,053: INFO: common: YAML file config\config.yaml loaded successfully]
+[2025-08-23 09:13:57,072: INFO: common: YAML file params.yaml loaded successfully]
+[2025-08-23 09:13:57,074: INFO: common: created directory at: artifacts]
+[2025-08-23 09:13:57,076: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir]
+[2025-08-23 09:13:57,079: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir]
+[2025-08-27 20:13:24,819: INFO: common: YAML file config\config.yaml loaded successfully]
+[2025-08-27 20:13:24,851: INFO: common: YAML file params.yaml loaded successfully]
+[2025-08-27 20:13:24,855: INFO: common: created directory at: artifacts]
+[2025-08-27 20:13:24,864: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir]
+[2025-08-27 20:13:24,869: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir]
+[2025-08-28 11:57:05,646: INFO: common: YAML file config\config.yaml loaded successfully]
+[2025-08-28 11:57:05,662: INFO: common: YAML file params.yaml loaded successfully]
+[2025-08-28 11:57:05,663: INFO: common: created directory at: artifacts]
+[2025-08-28 11:57:05,665: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir]
+[2025-08-28 11:57:05,668: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir]

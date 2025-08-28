@@ -1,37 +1,55 @@
-import os
-import urllib.request as request
-import zipfile
-from src.cnnClassifier import logger
-from src.cnnClassifier.utils.common import get_size
-from src.cnnClassifier.entity.config_entity import DataIngestionConfig 
-from pathlib import Path 
+import tensorflow as tf
+from pathlib import Path
+from src.cnnClassifier.entity.config_entity import EvaluationConfig
+from src.cnnClassifier.utils.common import save_json
 
 
-class DataIngestion:
-    def __init__(self, config: DataIngestionConfig):
+
+class Evaluation:
+    def __init__(self, config: EvaluationConfig):
         self.config = config
 
+    
+    def _valid_generator(self):
+
+        datagenerator_kwargs = dict(
+            rescale = 1./255,
+            validation_split=0.30
+        )
+
+        dataflow_kwargs = dict(
+            target_size=self.config.params_image_size[:-1],
+            batch_size=self.config.params_batch_size,
+            interpolation="bilinear"
+        )
+
+        valid_datagenerator = tf.keras.preprocessing.image.ImageDataGenerator(
+            **datagenerator_kwargs
+        )
+
+        self.valid_generator = valid_datagenerator.flow_from_directory(
+            directory=self.config.training_data,
+            subset="validation",
+            shuffle=False,
+            **dataflow_kwargs
+        )
 
     
-    def download_file(self):
-        if not os.path.exists(self.config.local_data_file):
-            filename, headers = request.urlretrieve(
-                url = self.config.source_URL,
-                filename = self.config.local_data_file
-            )
-            logger.info(f"{filename} download! with following info: \n{headers}")
-        else:
-            logger.info(f"File already exists of size: {get_size(Path(self.config.local_data_file))}")  
+    @staticmethod
+    def load_model(path: Path) -> tf.keras.Model:
+        return tf.keras.models.load_model(path)
+    
 
+    def evaluation(self):
+        model = self.load_model(self.config.path_of_model)
+        self._valid_generator()
+        self.score = model.evaluate(self.valid_generator)
 
     
-    def extract_zip_file(self):
-        """
-        zip_file_path: str
-        Extracts the zip file into the data directory
-        Function returns None
-        """
-        unzip_path = self.config.unzip_dir
-        os.makedirs(unzip_path, exist_ok=True)
-        with zipfile.ZipFile(self.config.local_data_file, 'r') as zip_ref:
-            zip_ref.extractall(unzip_path)
+    def save_score(self):
+        scores = {"loss": self.score[0], "accuracy": self.score[1]}
+        save_json(path=Path("scores.json"), data=scores)
+
+    
+
+    
